@@ -1,0 +1,314 @@
+---
+---
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* */
+$max-width: 820px;
+
+/* */
+* {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #141823;
+}
+
+h2 {
+    font-family: "helveticaneue-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    margin: 36px 0 6px 0;
+}
+
+h3 {
+    font-family: "helveticaneue-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    margin: 12px 0 6px 0;
+}
+
+p {
+	margin-top: 12px;
+}
+
+a {
+    color: #5994FC;
+	text-decoration: none;
+}
+
+.wrapper {
+    max-width: $max-width;
+    margin: 0px auto 12px auto;
+	padding: 0px 25px 12px 25px;
+}
+
+.split {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+/* */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
+    // background-color: rgba(28, 50, 82, 0.9);
+	-webkit-backdrop-filter: blur(10px);
+    transition: all .5s ease;
+	z-index: 2;
+
+    .wrapper {
+        margin: 18px auto 0 auto;
+    }
+
+	.logo {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s, opacity 0.5s linear;
+	}
+
+	nav a {
+		padding: 0 0 0 20px;
+	    font-size: 16px;
+		color: #9197A3;
+		font-weight: 500;
+	}
+
+	nav a.active {
+		color: #5994FC;
+		font-weight: 600;
+	}
+
+	nav a:hover {
+		color: #5994FC;
+	}
+}
+
+body.scrolled header {
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
+	background-color: rgba(255, 255, 255, 0.9);
+
+	.logo {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+/* */
+.splash {
+    min-height: 100vh;
+    padding: 0;
+    background-color: #fff;
+    color: #141823;
+
+	.wrapper {
+		position: absolute;
+		min-width: 100%;
+		max-width: 100%;
+		text-align: center;
+		padding: 0;
+	}
+
+	.wrapper.info {
+		top: 20%;
+
+		h1 {
+			font-size: 54px;
+		}
+
+		h3 {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 22px;
+			color: #9197A3;
+			max-width: 375px;
+			margin: 0 auto 30px auto;
+		}
+
+		form {
+			max-width: $max-width;
+			margin: 0 auto;
+		}
+
+		input {
+		    display: inline-block;
+			height: 48px;
+		    border: 1px solid #5B93FC;
+		    text-decoration: none;
+			font-size: 16px;
+		    vertical-align: middle;
+			color: #fff;
+			box-sizing: border-box;
+		}
+
+		input[type="email"] {
+			width: 60%;
+		    border-radius: 4px 0px 0px 4px;
+		    margin: 0px 0px 24px 8px;
+		    padding: 0px 12px;
+		}
+
+		input[type="submit"] {
+			width: 20%;
+			border-radius: 0px 4px 4px 0px;
+			margin: 0px 8px 24px 0px;
+			cursor: pointer;
+			background-color: #5B93FC;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #5B93FC;
+		}
+	}
+
+	.wrapper.scroll-down {
+		bottom: 50px;
+
+		a {
+			color: #9197A3;
+		}
+
+		svg {
+			display: block;
+			width: 28px;
+			margin: 8px auto;
+		}
+	}
+}
+
+/* */
+footer {
+    background-color: #4E5664;
+	color: white;
+	margin-top: 70px;
+	height: 80px;
+	font-size: 16px;
+
+	.wrapper {
+		padding-top: 32px;
+	}
+
+	.copyright {
+		color: #BDC1C9;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	header {
+		nav {
+			display: flex;
+			flex-direction: column;
+			text-align: right;
+
+			a {
+				padding-bottom: 5px;
+			}
+		}
+
+		nav:not(.expanded) {
+			a.active::after {
+				content: '>';
+			}
+			a:not(.active) {
+				display: none;
+			}
+		}
+	}
+
+	.splash {
+		.wrapper.info {
+			input[type="submit"], input[type="email"] {
+			    display: block;
+				margin: 0px auto;
+				width: 80%;
+			}
+
+			input[type="email"] {
+			    border-radius: 4px 4px 0px 0px;
+			}
+
+			input[type="submit"] {
+			    border-radius: 0px 0px 4px 4px;
+			}
+		}
+	}
+}
+
+
+/*
+TODO:
+- use SVG logo for header and intro section
+- add Favicon
+- add Twitter/Open Graph meta tags
+- add Team page
+- make footer look different
+- change footer link to be to Github
+- change color of subscribe button (normal + on hover)
+- change `content: '>';` to a pretty arrow
+- style body text better
+*/
