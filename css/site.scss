@@ -121,8 +121,9 @@ header {
     left: 0;
     width: 100%;
     min-height: 60px;
-    transition: all .5s ease;
 	z-index: 2;
+    transition: all .5s ease;
+	-webkit-backdrop-filter: blur(0px);
 
     .wrapper {
         margin: 18px auto 0 auto;
@@ -146,6 +147,7 @@ header {
 body.scrolled header {
 	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
 	background-color: rgba(255, 255, 255, 0.9);
+    transition: all .5s ease;
 	-webkit-backdrop-filter: blur(10px);
 
 	.logo {
@@ -222,6 +224,7 @@ body.scrolled header {
 		    border-radius: 4px 0px 0px 4px;
 		    margin: 0px 0px 24px 8px;
 		    padding: 0px 12px;
+			color: #141823;
 		}
 
 		input[type="submit"] {
@@ -261,7 +264,8 @@ footer {
 	font-size: 16px;
 
 	.wrapper {
-		padding-top: 32px;
+		padding: 28px 0;
+		margin: 0 auto;
 	}
 
 	.copyright {
@@ -269,6 +273,7 @@ footer {
 	}
 }
 
+/* */
 @media only screen and (max-width: 500px) {
 	header {
 		// responsive nav
@@ -314,15 +319,9 @@ footer {
 	}
 }
 
-
-/*
-TODO:
-- use SVG logo for header and intro section
-- add Favicon
-- add Twitter/Open Graph meta tags
-- add Team page
-- add footer link to Github
-- change color of subscribe button (normal + on hover)
-- change `content: '>';` to a pretty arrow
-- style body text better
-*/
+/* */
+@media only screen and (max-height: 500px) {
+	.splash .wrapper.scroll-down {
+		bottom: 0px;
+	}
+}
