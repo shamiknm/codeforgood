@@ -89,6 +89,10 @@ a {
 	text-decoration: none;
 }
 
+input {
+	-webkit-appearance: none;
+}
+
 .wrapper {
     max-width: $max-width;
     margin: 0px auto 12px auto;
