@@ -135,8 +135,22 @@ header {
 	nav a {
 		padding: 0 0 0 20px;
 	    font-size: 16px;
-		color: #9197A3;
+		color: #F6F7F8;
 		font-weight: 500;
+	}
+}
+
+body.scrolled header {
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
+	background-color: rgba(255, 255, 255, 0.9);
+
+	.logo {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	nav a {
+		color: #9197A3;
 	}
 
 	nav a.active {
@@ -149,22 +163,15 @@ header {
 	}
 }
 
-body.scrolled header {
-	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
-	background-color: rgba(255, 255, 255, 0.9);
-
-	.logo {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
 /* */
 .splash {
     min-height: 100vh;
     padding: 0;
-    background-color: #fff;
-    color: #141823;
+    // background-color: #fff;
+    // color: #141823;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	color: #F6F7F8;
 
 	.wrapper {
 		position: absolute;
@@ -185,7 +192,7 @@ body.scrolled header {
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 22px;
-			color: #9197A3;
+			color: #BDC1C9;
 			max-width: 375px;
 			margin: 0 auto 30px auto;
 		}
@@ -258,46 +265,47 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 500px) {
-	header {
-		nav {
-			display: flex;
-			flex-direction: column;
-			text-align: right;
-
-			a {
-				padding-bottom: 5px;
-			}
-		}
-
-		nav:not(.expanded) {
-			a.active::after {
-				content: '>';
-			}
-			a:not(.active) {
-				display: none;
-			}
-		}
-	}
-
-	.splash {
-		.wrapper.info {
-			input[type="submit"], input[type="email"] {
-			    display: block;
-				margin: 0px auto;
-				width: 80%;
-			}
-
-			input[type="email"] {
-			    border-radius: 4px 4px 0px 0px;
-			}
-
-			input[type="submit"] {
-			    border-radius: 0px 0px 4px 4px;
-			}
-		}
-	}
-}
+// responsive nav
+// @media only screen and (max-width: 500px) {
+// 	header {
+// 		nav {
+// 			display: flex;
+// 			flex-direction: column;
+// 			text-align: right;
+//
+// 			a {
+// 				padding-bottom: 5px;
+// 			}
+// 		}
+//
+// 		nav:not(.expanded) {
+// 			a.active::after {
+// 				content: '>';
+// 			}
+// 			a:not(.active) {
+// 				display: none;
+// 			}
+// 		}
+// 	}
+//
+// 	.splash {
+// 		.wrapper.info {
+// 			input[type="submit"], input[type="email"] {
+// 			    display: block;
+// 				margin: 0px auto;
+// 				width: 80%;
+// 			}
+//
+// 			input[type="email"] {
+// 			    border-radius: 4px 4px 0px 0px;
+// 			}
+//
+// 			input[type="submit"] {
+// 			    border-radius: 0px 0px 4px 4px;
+// 			}
+// 		}
+// 	}
+// }
 
 
 /*
@@ -306,8 +314,7 @@ TODO:
 - add Favicon
 - add Twitter/Open Graph meta tags
 - add Team page
-- make footer look different
-- change footer link to be to Github
+- add footer link to Github
 - change color of subscribe button (normal + on hover)
 - change `content: '>';` to a pretty arrow
 - style body text better

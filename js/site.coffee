@@ -3,18 +3,19 @@
 $(window).scroll ->
     $('body').toggleClass 'scrolled', window.scrollY > window.innerHeight / 10
 
+# responsive nav
+# $('nav a').click (e) ->
+#     if $(window).width() <= 500
+#         if !($('nav').hasClass 'expanded')
+#             e.stopPropagation();
+#             e.preventDefault();
+#             e.stopImmediatePropagation();
+#         $('nav').toggleClass 'expanded'
+#
+# $('body').click ->
+#     $('nav').removeClass 'expanded'
+
 # nav links
-$('nav a').click (e) ->
-    if $(window).width() <= 500
-        if !($('nav').hasClass 'expanded')
-            e.stopPropagation();
-            e.preventDefault();
-            e.stopImmediatePropagation();
-        $('nav').toggleClass 'expanded'
-
-$('body').click ->
-    $('nav').removeClass 'expanded'
-
 $('header a').smoothScroll()
 $('.splash a').smoothScroll()
 
