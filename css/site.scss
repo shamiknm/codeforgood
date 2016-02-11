@@ -134,6 +134,14 @@ header {
 		visibility: hidden;
 		opacity: 0;
 		transition: visibility 0s, opacity 0.5s linear;
+		line-height: 0;
+		position: relative;
+
+		img {
+			height: 24px;
+			position: absolute;
+			bottom: 0px;
+		}
 	}
 
 	nav a {
@@ -190,8 +198,10 @@ body.scrolled header {
 	.wrapper.info {
 		top: 20%;
 
-		h1 {
-			font-size: 54px;
+		img.logo {
+			max-width: 820px;
+			margin: 0 auto;
+			width: 60%;
 		}
 
 		h3 {
