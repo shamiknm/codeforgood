@@ -181,10 +181,9 @@ body.scrolled header {
 .splash {
     min-height: 100vh;
     padding: 0;
-    // background-color: #fff;
-    // color: #141823;
 	background-image: url(../img/bg.jpg);
 	background-size: cover;
+	background-position: center;
 	color: #F6F7F8;
 
 	.wrapper {
@@ -201,7 +200,7 @@ body.scrolled header {
 		img.logo {
 			max-width: 820px;
 			margin: 0 auto;
-			width: 60%;
+			width: 80%;
 		}
 
 		h3 {
@@ -307,7 +306,7 @@ footer {
 		// 	}
 		// }
 		nav {
-			display: none;
+			visibility: hidden;
 		}
 	}
 
